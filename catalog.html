@@ -8,45 +8,56 @@
   </head>
   <body>
     <header class="main-header">
-      <section class="main-header-top">
-        <a href="index.html"><img src="img/tehnomart-logo.svg" width="220" height="47" alt="Логотип Техномарта"></a>
-        <span class="searchbar">Поиск</span>
-        <span class="favorites">Закладки: 0</span>
-        <span class="basket">Закладки: 0</span>
-        <span class="btn btn-order">Оформить заказ</span>
-      </section>
-      <section class="main-header-middle">
-        <h1 class="main-title">
-          Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для ремонта
-        </h1>
-       
-        <address>
-           <b class="main-phone">+7 (812) 555-05-55</b>
-           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </address>
-
-        <nav class="user-menu">
-          <a href="#" class="btn btn-login">Войти</a>
-          <a href="#" class="btn btn-signin">Регистрация</a>
+      <div class = "main-header-container">
+        <section class="main-header-top">
+          <div class="tehnomart-logo">
+              <a href="index.html"><img src="img/tehnomart-logo.svg" width="220" height="47" alt="Логотип Техномарта"></a>
+          </div>
+          <span class="searchbar">Поиск:</span>
+          <a class="top-btn favorites" href="#">Закладки: 0</a>
+          <a class="top-btn basket" href="#">Корзина: 0</a>
+          <a class="top-btn order" href="#">Оформить заказ</a>
+        </section>
+    
+        <section class="main-header-middle">
+          <h1 class="main-title">
+            Интернет-магазин<br>
+            строительных материалов<br>
+            и инструментов для ремонта
+          </h1>
+            
+          <address class="main-address">
+            <div class="main-phone">+7 (812) 555-05-55</div>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </address>
+    
+          <nav class="user-menu">
+            <a href="#" class="btn btn-login">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                <path fill="currentColor" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
+                <path fill="currentColor" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
+              </svg>
+              Войти
+            </a>
+            <a href="#" class="btn btn-signin">Регистрация</a>
+          </nav>
+        </section>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-item"><a href="#">Главная</a></li>
+            <li class="main-nav-item"><a href="#">Компания</a></li>
+            <li class="main-nav-item"><a href="catalog.html">Каталог</a></li>
+            <li class="main-nav-item"><a href="#">Новости</a></li>
+            <li class="main-nav-item"><a href="#">Спецпредложения</a></li>
+            <li class="main-nav-item"><a href="#">Доставка</a></li>
+            <li class="main-nav-item"><a href="#">Контакты</a></li>
+          </ul>
         </nav>
-      </section>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+      </div>  
     </header>
     <main class="container">
       <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
         <li class="breadcrumb-item"><a href="#">Каталог</a></li>
         <li class="breadcrumb-item"><a href="#">Инструменты</a></li>
         <li class="breadcrumb-item">Перфораторы</li>

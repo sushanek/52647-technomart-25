@@ -6,12 +6,12 @@ let server = require("browser-sync").create();
 
 gulp.task("server", function () {
   server.init({
-    server: "/",
+    server: "",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("**/*.*").on("change", server.reload);
 });

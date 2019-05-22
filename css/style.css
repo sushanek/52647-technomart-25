@@ -11,17 +11,18 @@
   src: url("../fonts/cuprumbold.woff") format("woff"),
        url("../fonts/cuprumbold.woff2") format("woff2");
   
-  font-family: cuprum;
+   font-family: cuprum-italic;
   font-weight: 400;
   font-style: italic;
   src: url("../fonts/cuprumitalic.woff") format("woff"),
-       url("../fonts/cuprumitalic.woff2") format("woff2");
-  
+			 url("../fonts/cuprumitalic.woff2") format("woff2");
+			 
+  /*
   font-family: cuprum;
   font-weight: 700;
   font-style: italic;
   src: url("../fonts/cuprumbolditalic.woff") format("woff"),
-       url("../fonts/cuprumbolditalic.woff2") format("woff2");
+       url("../fonts/cuprumbolditalic.woff2") format("woff2"); */
 }
 
 @font-face {
@@ -40,17 +41,285 @@
 
 body {
   margin: 0;
-  padding: 0;
-  
-  
+	padding: 0;	
+	font-family: "cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 17px;
 }
 
-a {
-  font-size: 10px;
+.main-header {
+	display: flex;
+	flex-direction: column;
+	width: 1200px;
+	height: 320px;
+	align-items: center;
+  background-color: #f4f7f9;
+}
+
+.main-header-container {
+  width: 1200px;
+  height: 42px;
+  background-color: #293449;
+  color: white;
+}
+
+.main-header-top {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  
+	display: flex;
+	align-items: top;
+}
+
+.tehnomart-logo {
+  width: 220px;
+  height: 47px;
+  background-color: #ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.tehnomart-logo:hover {
+  background-color: #ca2c37;
+}
+
+.tehnomart-logo:active {
+  background-color: #ba2732;
+}
+
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 286px;
+  height: 42px;
+  line-height: 42px;
+  border: 0px;
+  color: #ffffff;
+  flex-grow: 1;
+}
+
+.searchbar::before {
+  content: "";
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  background-image: url(../img/icon-search.svg);
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.3;
+}
+
+.top-btn {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  color: white;
   text-decoration: none;
+  padding: 0 20px;
 }
 
-/**.visually-hidden {
+.favorites:hover::before,
+.basket:hover::before{
+  opacity: 1;
+}
+
+.favorites:active::before,
+.basket:active::before{
+  opacity: 0.3;
+}
+
+.top-btn:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #161d29;
+}
+
+
+
+.favorites::before {
+  content: "";
+  width: 14px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(../img/icon-bookmark.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  margin-right: 13px;
+}
+
+.basket::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  margin-right: 13px;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  background-color: #63a63e;
+}
+
+.order:hover {
+  background-color: #5fbb2d;
+}
+
+.order:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #518534;
+}
+
+.main-header-middle {
+  display: flex;
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: top;
+  justify-content: space-between;
+  margin-top: 41px;
+  
+}
+
+.main-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.44;
+  text-align: left;
+  color: #ee3643;
+  font-style: italic;
+
+
+}
+
+.main-address {
+  font-style: normal;
+  font-size: 14px;
+  color: #32425c;
+  text-align: center;  
+}
+
+.main-phone {
+  display: flex;
+  align-items: center;
+  width: 264px;
+  height: 39px;
+  border: solid 3px #ffffff;
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  margin-bottom: 10px;
+  line-height: 39px;
+}
+
+.main-phone:before {
+  content: "";
+  height: 19px;
+  width: 19px;
+  display: inline-block;
+  background-image: url(../img/icon-phone.svg);
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.btn {
+  display: flex;
+  height: 45px;  
+  font-size: 21px;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.btn-login {
+  margin-right: 10px;
+  padding-left: 14px;
+}
+
+.btn-login svg {
+  margin-right: 13px;
+  color: #c5c5c5;
+  
+}
+
+.btn:hover {
+  color: #ee3643;
+}
+
+.btn:hover svg {
+  color: #32425c;
+}
+
+.btn:active svg {
+  color: #c5c5c5
+}
+
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-login:hover::before {
+
+}
+
+
+
+.main-nav {
+  width: 940px;
+  margin-top: 41px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
+}
+
+.main-nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  height: 60px;
+}
+
+.main-nav-item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.main-nav-item a {
+  display: inline-block;  
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px 30px;
+}
+
+.main-nav-item a:hover,
+.main-nav-item a:focus {
+  background-color: #293449;
+}
+
+.main-nav-item a:active {
+  color: #f1f5f7;
+  background-color: #1d2739;
+}
+
+.user-menu {
+  display: flex;
+
+}
+
+
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
