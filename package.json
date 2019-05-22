@@ -1,0 +1,10 @@
+{
+  "name": "52647-technomart-25",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "4.0.x"
+  },
+  "scripts": {
+    "start": "gulp server"
+  }
+}
