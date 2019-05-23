@@ -56,6 +56,7 @@ body {
 	align-items: center;
   background-color: #f4f7f9;
   margin: 0 auto;
+  margin-bottom: 59px;
 }
 
 .main-header-container {
@@ -87,6 +88,10 @@ body {
 
 .tehnomart-logo:active {
   background-color: #ba2732;
+}
+
+input {
+  box-sizing: border-box;
 }
 
 
@@ -270,8 +275,6 @@ body {
 
 }
 
-
-
 .main-nav {
   width: 940px;
   margin-top: 41px;
@@ -319,6 +322,331 @@ body {
 
 }
 
+
+/**********************************************************
+ОСНОВНАЯ ЧАСТЬ
+**********************************************************/
+
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+} */
+
+.vista {
+  display: flex;
+  width: 940px; /*940*/
+  margin:0;
+  padding: 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.duble .vista-item {
+  margin-right: 0;
+  display: flex;
+}
+
+.vista-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vista-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 300px;
+  height: 130px;
+  background-color: silver;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.vista-item h3 {
+  color: white;
+  margin-left: 23px;
+  margin-top: 26px;
+  font-size: 24px;
+  
+}
+
+.vista-item a {
+    
+  height: 38px;
+  align-self: baseline;
+  padding: 0 24px;
+
+  font-size: 14px;
+  line-height: 38px;
+  color: white;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 23px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.vista-item a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.vista-item a:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.vista-1 {
+  background: #ffbf47 url(../img/icon-1-materials.svg) 85% 50% no-repeat;
+}
+
+.vista-2 {
+  background: #3bbce3 url(../img/icon-2-instruments.svg) 85% 50% no-repeat;
+}
+
+.vista-3 {
+  margin-right: 0;
+  background: #dc91d8 url(../img/icon-3-equipment.svg) 85% 50% no-repeat;
+}
+
+.vista-4 {
+  background: #8ed78f url(../img/icon-4-sale.svg) 85% 50% no-repeat;
+}
+
+
+.vista-5 {
+  background: #ffc047 url(../img/icon-5-delivery.svg) 85% 50% no-repeat;
+  margin-bottom: 0;
+}
+
+.vista-slider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+ 
+  width: 620px;
+  height: 280px;
+  background-color: dar;
+  margin-right: 20px;
+  background-image: url(../img/slide-image-1.jpg);
+  background-size: cover;
+}
+
+.vista-slider .vista-slider-title {
+  width: 620px;
+  height: 105px;
+  background-color: rgba(0, 0, 0, 0.25)
+  display: flex;
+  
+}
+
+.vista-slider-title h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  margin-top: 27px;
+  margin-left: 24px;
+  text-transform: uppercase;
+
+}
+
+.vista-slider-title span {
+  font-family: ptsans, Arial, sans-serif;
+  color: white;
+  margin-top: 8px;
+  margin-left: 24px;
+
+}
+
+.promo-slider-nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 16px;
+}
+
+.promo-slider-nav button {
+  display: none;
+}
+
+.promo-slider-nav label {
+  display: flex;
+  width: 40px;
+  height: 80px;
+}
+
+
+.slider-right + label::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 24px;
+  width: 22px;
+  height: 40px;
+  background-image: url(../img/icon-right.svg);
+}
+
+.slider-left + label::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 24px;
+  width: 22px;
+  height: 40px;
+  background-image: url(../img/icon-left.svg);
+}
+
+
+.promo-slider-nav label:hover {
+  opacity: 0.75;
+}
+
+.promo-slider-nav label:active {
+  opacity: 0.65;
+}
+
+
+.vista-slider a {
+  height: 38px;
+  align-self: baseline;
+  padding: 0 45px;
+  margin-top: 58px;
+  margin-left: 23px;
+  margin-bottom: 22px;
+
+  font-size: 14px;
+  line-height: 38px;
+  color: white;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  background-color: #ee3643;
+  border-radius: 4px;
+}
+
+.vista-slider a:hover {
+  color: white;
+  background-color: #ca2c37;
+}
+
+.vista-slider a:active {
+  color: white;
+  background-color: #ba2732;
+}
+
+/*
+Футер
+*/
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #32425c;
+  width: auto;
+  min-height: 300px;
+}
+
+.main-footer-top .tehnomart-logo {
+  display: flex;
+  height: 68px;
+  justify-content: center;
+  align-items: center; 
+}
+
+.main-footer-top,
+.main-footer-mid,
+.main-footer-bot {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  align-items: center; 
+  justify-content: space-between;
+  
+}
+
+.footer-container {
+  width: auto;
+  height: 100%;
+  background-color: #293449;
+  flex-grow: 1;
+}
+
+.main-footer-mid {
+  align-items: flex-start;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.main-footer-mid address {
+  font-style: normal;
+  line-height: 1.33;
+}
+
+
+.main-footer-bot p {
+  font-size: 16px;
+  line-height: 1.13;
+}
+
+.footer-social {
+  display: flex;
+  list-style: none;
+  
+}
+.social-btn li {
+  
+  width: 0;
+  height: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+li .social-btn::after {
+  content: "";
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  margin-right: 3px; 
+}
+
+li:nth-child(1) .social-btn::after {
+  background-image: url(../img/icon-vk.svg);
+}
+
+li:nth-child(2) .social-btn::after {
+  background-image: url(../img/icon-fb.svg);
+}
+
+li:nth-child(3) .social-btn::after {
+  background-image: url(../img/icon-insta.svg);
+}
+
+.main-footer-mid-nav a,
+.main-footer-bot a {
+  color: #ffd180;
+}
+
+.new-flag-item::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/new-flag-item.svg);
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+}
 
 .visually-hidden {
   position: absolute;
