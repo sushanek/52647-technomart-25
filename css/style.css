@@ -11,7 +11,7 @@
   src: url("../fonts/cuprumbold.woff") format("woff"),
        url("../fonts/cuprumbold.woff2") format("woff2");
   
-   font-family: cuprum-italic;
+  font-family: cuprum-italic;
   font-weight: 400;
   font-style: italic;
   src: url("../fonts/cuprumitalic.woff") format("woff"),
@@ -31,7 +31,9 @@
   font-style: normal;
   src: url("../fonts/ptsans.woff") format("woff"),
        url("../fonts/ptsans.woff2") format("woff2");
+}
 
+@font-face {
   font-family: ptsans;
   font-weight: 700;
   font-style: normal;
@@ -94,7 +96,7 @@ body {
   width: 286px;
   height: 42px;
   line-height: 42px;
-  border: 0px;
+  border: 0;
   color: #ffffff;
   flex-grow: 1;
 }
@@ -179,7 +181,7 @@ body {
   width: 940px;
   margin-left: auto;
   margin-right: auto;
-  align-items: top;
+  align-items: flex-start;
   justify-content: space-between;
   margin-top: 41px;
   
@@ -211,7 +213,6 @@ body {
   height: 39px;
   border: solid 3px #ffffff;
   font-size: 21px;
-  line-height: 21px;
   color: #ee3643;
   margin-bottom: 10px;
   line-height: 39px;
