@@ -4,25 +4,30 @@
   font-style: normal;
   src: url("../fonts/cuprum.woff") format("woff"),
        url("../fonts/cuprum.woff2") format("woff2");
-  
+}
+
+@font-face {
   font-family: cuprum;
   font-weight: 700;
   font-style: normal;
   src: url("../fonts/cuprumbold.woff") format("woff"),
        url("../fonts/cuprumbold.woff2") format("woff2");
-  
+}
+
+@font-face {
   font-family: cuprum-italic;
   font-weight: 400;
   font-style: italic;
   src: url("../fonts/cuprumitalic.woff") format("woff"),
 			 url("../fonts/cuprumitalic.woff2") format("woff2");
-			 
-  /*
+}
+
+@font-face {
   font-family: cuprum;
   font-weight: 700;
   font-style: italic;
   src: url("../fonts/cuprumbolditalic.woff") format("woff"),
-       url("../fonts/cuprumbolditalic.woff2") format("woff2"); */
+       url("../fonts/cuprumbolditalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -72,14 +77,14 @@ body {
   margin-right: auto;
   
 	display: flex;
-	align-items: top;
+	align-items: flex-start;
 }
 
 .tehnomart-logo {
   width: 220px;
   height: 47px;
   background-color: #ee3643;
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
 .tehnomart-logo:hover {
@@ -89,11 +94,6 @@ body {
 .tehnomart-logo:active {
   background-color: #ba2732;
 }
-
-input {
-  box-sizing: border-box;
-}
-
 
 .searchbar {
   display: flex;
@@ -271,9 +271,6 @@ input {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.btn-login:hover::before {
-
-}
 
 .main-nav {
   width: 940px;
@@ -290,7 +287,7 @@ input {
   justify-content: space-around;
   align-items: center;
   margin: 0;
-  padding: 0px;
+  padding: 0;
   list-style: none;
   height: 60px;
 }
@@ -327,17 +324,9 @@ input {
 ОСНОВНАЯ ЧАСТЬ
 **********************************************************/
 
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-} */
-
 .vista {
   display: flex;
-  width: 940px; /*940*/
-  margin:0;
+  width: 940px;
   padding: 0;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -426,10 +415,8 @@ input {
   display: flex;
   flex-direction: column;
   position: relative;
- 
   width: 620px;
   height: 280px;
-  background-color: dar;
   margin-right: 20px;
   background-image: url(../img/slide-image-1.jpg);
   background-size: cover;
@@ -438,7 +425,7 @@ input {
 .vista-slider .vista-slider-title {
   width: 620px;
   height: 105px;
-  background-color: rgba(0, 0, 0, 0.25)
+  background-color: rgba(0, 0, 0, 0.25);
   display: flex;
   
 }
@@ -560,6 +547,37 @@ input {
   align-items: center; 
 }
 
+.footer-nav-list,
+.vista-nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  width: 560px;
+
+}
+
+.footer-nav-item a {
+  margin-left: 58px;
+  color: white;
+  text-decoration: none;
+}
+
+.vista-nav-list a {
+  margin-left: 58px;
+  color: #ffd180;
+  text-decoration: none;
+}
+
+.footer-nav-item a:hover,
+.vista-nav-list a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav-item a:active,
+.vista-nav-list a:active {
+  opacity: 0.5;
+}
+
 .main-footer-top,
 .main-footer-mid,
 .main-footer-bot {
@@ -567,8 +585,12 @@ input {
   width: 940px;
   margin: 0 auto;
   align-items: center; 
-  justify-content: space-between;
-  
+  justify-content: space-between; 
+}
+
+.main-footer-mid {
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .footer-container {
@@ -600,8 +622,7 @@ input {
   list-style: none;
   
 }
-.social-btn li {
-  
+.social-btn li {  
   width: 0;
   height: 0;
   white-space: nowrap;
@@ -620,6 +641,10 @@ li .social-btn::after {
   margin-right: 3px; 
 }
 
+.social-btn:hover::after{
+  background-color: #ee3643;
+} 
+
 li:nth-child(1) .social-btn::after {
   background-image: url(../img/icon-vk.svg);
 }
@@ -637,6 +662,17 @@ li:nth-child(3) .social-btn::after {
   color: #ffd180;
 }
 
+.main-footer-mid-nav a:hover,
+.main-footer-bot a:hover {
+  text-decoration: none;
+}
+
+.main-footer-mid-nav a:active,
+.main-footer-bot a:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
 .new-flag-item::before {
   content: "";
   position: absolute;
@@ -644,7 +680,7 @@ li:nth-child(3) .social-btn::after {
   width: 60px;
   height: 60px;
   background-image: url(../img/new-flag-item.svg);
-  background-position: 100% 0%;
+  background-position: 100% 0;
   background-repeat: no-repeat;
 }
 
