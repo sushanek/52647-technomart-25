@@ -1492,6 +1492,7 @@ li:nth-child(3) .social-btn {
   background-image: url(../img/new-flag-item.svg);
   background-position: 100% 0;
   background-repeat: no-repeat;
+  z-index: 20;
 }
 
 .visually-hidden {
