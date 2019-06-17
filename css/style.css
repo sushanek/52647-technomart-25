@@ -57,10 +57,13 @@ a {
   text-decoration: none;
 }
 
-
 img {
   max-width: 100%;
   height: auto;
+} 
+
+.hide {
+  display: none;
 }
 
 .center-wrapper {
@@ -81,7 +84,7 @@ img {
 
 .main-header-container {
   width: 100%;
-  height: 43px;
+  height: 42px;
   background-color: #293449;
   color: white;
 }
@@ -100,7 +103,6 @@ img {
 
 .tehnomart-logo:hover {background-color: #ca2c37;}
 .tehnomart-logo:active {background-color: #ba2732;}
-
 .search-field {position: relative;}
 
 .searchbar-label {
@@ -123,7 +125,7 @@ img {
   border: 0;
   background-color: #293449;
   min-width: 267px;
-  line-height: 41px;
+  line-height: 40px;
   color: #ffffff;
 }
 
@@ -148,11 +150,13 @@ input.searchbar:focus ~ .searchbar-label {
   align-items: center;
   padding: 0 20px;
   min-width: 110px;
-  height: 43px;
-  line-height: 43px;
+  height: 42px;
+  line-height: 42px;
   color: white;
   background-color: #293449;
 }
+
+
 
 .top-btn.basket.active {background-color: #ee3643;}
 .favorites:hover::before, .basket:hover::before{opacity: 1;}
@@ -237,6 +241,7 @@ input.searchbar:focus ~ .searchbar-label {
   margin-bottom: 9px;
   
   font-size: 21px;
+
   line-height: 40px;
 
   border: solid 3px #ffffff;
@@ -407,11 +412,6 @@ input.searchbar:focus ~ .searchbar-label {
   margin-left: 15px;
 }
 
-
-/**********************************************************
-ОСНОВНАЯ ЧАСТЬ
-**********************************************************/
-
 .vista {
   display: flex;
   width: 940px;
@@ -494,7 +494,7 @@ input.searchbar:focus ~ .searchbar-label {
 }
 
 .vista-4 {
-  background: #8ed78f url(../img/icon-4-sale.svg) 197px 25px no-repeat;
+  background: #8ed78f url(../img/icon-4-sale.svg) 192px 24px no-repeat;
 }
 
 .vista-5 {
@@ -541,7 +541,6 @@ input.searchbar:focus ~ .searchbar-label {
 }
 
 .vista-slider-title span {
-  /* font-family: ptsans, Arial, sans-serif; */
   color: white;
   padding-top: 4px;
   letter-spacing: 0.5px;
@@ -637,6 +636,7 @@ input.searchbar:focus ~ .searchbar-label {
 
 .btn-body {
   height: 38px;
+  justify-content: center;
   align-self: center;
   padding: 2px 47px 0;
   font-size: 14px;
@@ -648,6 +648,10 @@ input.searchbar:focus ~ .searchbar-label {
   border-radius: 4px;
   box-sizing: border-box;
   letter-spacing: 0.2px;
+}
+
+h2 + .btn-body {
+  min-width: 253px;
 }
 
 .btn-body:hover {
@@ -666,7 +670,7 @@ input.searchbar:focus ~ .searchbar-label {
   display: flex;
   flex-direction: column;
   width: 940px;
-  margin: 0 auto 21px;
+  margin: 0 auto 20px;
 }
 
 .section-title {
@@ -675,17 +679,22 @@ input.searchbar:focus ~ .searchbar-label {
   justify-content: space-between;
   align-items: center;
   background-color: #f9f5f0;
-  height: 89px;
-  padding-right: 24px;
+  
   margin-bottom: 20px;
-  padding-left: 30px;
+
+  padding-right: 24px;
+  padding-left: 28px;
+
+  padding-top: 26px;
+  padding-bottom: 25px;
 }
 
 .section h2 {
   font-size: 30px;
+  color: #32425c;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 0;
+  margin:0;
 }
 
 .section-text {
@@ -708,6 +717,7 @@ input.searchbar:focus ~ .searchbar-label {
 
 .catalog-item {
   position: relative;
+
 
 }
 
@@ -751,11 +761,12 @@ input.searchbar:focus ~ .searchbar-label {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
+  width: 218px;
   height: 145px;
   margin-bottom: 20px;
   border: solid 1px #eaeaea;
   align-self: center;
+  box-sizing: border-box
 }
 
 .brands-item a {
@@ -765,6 +776,7 @@ input.searchbar:focus ~ .searchbar-label {
   justify-content: space-around;
   align-items: center;
 }
+
 
 .brands-item:hover {
   border-color: white;
@@ -792,17 +804,15 @@ input.searchbar:focus ~ .searchbar-label {
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 400;
-  margin-top: 68px;
-  margin-bottom: 38px; 
+  margin-top: 63px;
+  margin-bottom: 24px;
+  color: black; 
 }
 
 .service-slider {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   position: relative;
-  margin-bottom: 51px;
-  height: 279px;
 }
 
 .service-slider:after {
@@ -811,7 +821,7 @@ input.searchbar:focus ~ .searchbar-label {
   display: block;
   background-image: url(../img/shadow.png);
   width: 10px;
-  height: 279px;
+  min-height: 279px;
   left: 230px;
 }
 
@@ -821,6 +831,7 @@ input.searchbar:focus ~ .searchbar-label {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 47px;
 }
 
 .service-item {
@@ -831,23 +842,25 @@ input.searchbar:focus ~ .searchbar-label {
   background-color: white;
   color:#32425c;
   box-shadow: none;
+  min-height: 64px;
+  line-height: 64px;
 }
 
 .service-item a {
   width: 240px;
-  height: 61px;
+  min-height: 62px;
   box-sizing: border-box;
   padding-left: 22px;
-  background-color: #32425c;
-  
+
   font-size: 21px;
-  line-height: 61px;
+  line-height: 62px;
   font-weight: 700;
 
-  background-color: #32425c;
   color: white;
-  box-shadow: 0 1px 0 0 #293449, 
-              inset 0 1px 0 0 #405069;
+  background-color: #32425c;
+  background-color: #32425c;
+  box-shadow: inset 0 1px 0 0 #293449, 
+              inset 0 2px 0 0 #405069;
 }
 
 .service-item a:hover {
@@ -860,34 +873,61 @@ input.searchbar:focus ~ .searchbar-label {
   flex-direction: column;
   margin-left: 80px;
   min-width: 700px;
-  min-height: 279px;
-  background: url(../img/slider-delivery.png) no-repeat 100% 100%;
+  min-height: 334px;
 }
+
+.service-description .btn-body {
+  align-self: flex-start;
+}
+
+.service-delivery {
+  background: url(../img/slider-delivery.png) no-repeat 65% 100%;
+}
+
+.service-guarantee {
+  background: url(../img/slider-guarantee.png) no-repeat 75% 100%;
+}
+
+.service-credit {
+  background: url(../img/slider-credit.png) no-repeat 65% 100%;
+}
+
 
 .service-description h3 {
   font-size: 36px;
   font-weight: 400;
   text-transform: uppercase;
   color: #32425c;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 44px;
+  margin-bottom: 23px;
 
 
 }
 .company {
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 82px;
+  margin-top: 76px;
   margin-bottom: 86px;
 }
 
 .company h2 {
-  margin-bottom: 38px;
+  margin:0;
+  margin-bottom: 24px;
+  color: black;
+}
+
+.company .section-text {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.company .list-text {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .company .btn-body {
-  align-self: baseline;
+  align-self: flex-start;
+  padding: 2px 38px 0;
 }
 
 .company-about {
@@ -895,17 +935,19 @@ input.searchbar:focus ~ .searchbar-label {
   flex-direction: column;
   align-items: flex-start;
   margin-right: 120px;
+  min-width: 300px;
 }
 
 .company-contact {
   display: flex;
   flex-direction: column;
+  min-width: 300px;
 }
 
 .company-contact .btn-body {
   align-self: stretch;
   padding: auto;
-  padding: 2px 60px 0;
+  padding: 2px 0 0;
 }
 
 
@@ -915,7 +957,7 @@ input.searchbar:focus ~ .searchbar-label {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 37px;
+  margin-bottom: 27px;
 
 }
 
@@ -927,8 +969,8 @@ input.searchbar:focus ~ .searchbar-label {
 
 .company-client-list li::before {
   content: "";
-  margin-right: 7px;
-  display: inline-block;
+  margin-right: 10px;
+  display: block;
   width: 25px;
   height: 2px;
   background-color: #ee3643;
@@ -1433,7 +1475,10 @@ input.searchbar:focus ~ .searchbar-label {
   display: flex;
   height: 68px;
   justify-content: center;
-  align-items: center; 
+}
+
+.main-footer-top .tehnomart-logo img {
+  transform: scale(1.26);
 }
 
 .footer-nav-list,
@@ -1441,33 +1486,31 @@ input.searchbar:focus ~ .searchbar-label {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  width: 560px;
-
+  margin: 0;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .vista-nav-list {
-  margin: 0;
+  margin: 0;  
+  width: 530px;
 }
 
+
 .footer-nav-item a {
-  margin-left: 58px;
+  margin-left: 59px;
   color: white;
 }
 
 .vista-nav-list a {
-  margin-left: 58px;
+  margin-left: 60px;
   color: #ffd180;
+  line-height: 1.33;
 }
 
-.footer-nav-item a:hover,
-.vista-nav-list a:hover {
-  text-decoration: underline;
-}
-
-.footer-nav-item a:active,
-.vista-nav-list a:active {
-  opacity: 0.5;
-}
+.footer-nav-item a:hover, .vista-nav-list a:hover {text-decoration: underline;}
+.footer-nav-item a:active,.vista-nav-list a:active {opacity: 0.5;}
 
 .main-footer-top,
 .main-footer-mid,
@@ -1475,13 +1518,7 @@ input.searchbar:focus ~ .searchbar-label {
   display: flex;
   width: 940px;
   margin: 0 auto;
-  align-items: center; 
   justify-content: space-between; 
-}
-
-.main-footer-mid {
-  align-items: flex-start;
-  align-content: flex-start;
 }
 
 .footer-container {
@@ -1493,26 +1530,43 @@ input.searchbar:focus ~ .searchbar-label {
 
 .main-footer-mid {
   align-items: flex-start;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 28px;
+  margin-bottom: 51px;
 }
 
 .main-footer-mid address {
+  font-size: 18px;
+  margin: 0;
   font-style: normal;
-  line-height: 1.33;
+  line-height: 23px;
 }
 
+.main-footer-bot {
+  padding-top: 37px;
+  align-items: flex-start;
+}
 
 .main-footer-bot p {
+  margin: 0;
   font-size: 16px;
   line-height: 1.13;
+  padding: 0;
+  padding-right: 13px;
 }
 
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
   list-style: none;
-  
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.1);
 }
+
+
+
 li .social-btn {  
   display: flex;
   width: 42px;
@@ -1549,12 +1603,12 @@ li:nth-child(3) .social-btn {
 }
 
 .main-footer-bot a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .main-footer-mid-nav a:hover,
 .main-footer-bot a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .main-footer-mid-nav a:active,
@@ -1590,3 +1644,70 @@ li:nth-child(3) .social-btn {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.modal {
+  position: fixed;
+  background-color: white;
+  top: 40%;
+  left: 30%;
+  z-index: 20;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal::before {
+  position: fixed;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.modal::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top:-7px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: #FF5156;
+}
+
+
+.letter-btn {
+  border: 0;
+}
+
+
+.btn-close {
+  font-size: 0;
+  border: 0;
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  background-color: transparent;
+  background-image: url(../img/form-close.svg);
+}
+
+.btn-close:hover {opacity: 0.8;}
+
+.modal-letter {
+  width: 620px;
+  display: flex;
+}
+
+.modal-letter fieldset {
+  margin: 0 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
