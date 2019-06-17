@@ -616,6 +616,7 @@ input.searchbar:focus ~ .searchbar-label {
 }
 
 .slider-left:before {
+  
   visibility: hidden;
   content: "";
   position: absolute;
