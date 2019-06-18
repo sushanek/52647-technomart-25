@@ -78,27 +78,32 @@ img {
 	min-height: 320px;
 	align-items: center;
   background-color: #f4f7f9;
-  margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .main-header-container {
-  width: 100%;
-  height: 42px;
-  background-color: #293449;
-  color: white;
 }
 
 .main-header-top {
 	display: flex;
-	align-items: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 940px;
+  background-color: #293449;
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.main-header-top > .center-wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 .tehnomart-logo {
   width: 220px;
-  height: 48px;
+  height: 42px;
   background-color: #ee3643;
-  box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 5px 0 0 #B62430;
 }
 
 .tehnomart-logo:hover {background-color: #ca2c37;}
@@ -107,7 +112,7 @@ img {
 
 .searchbar-label {
   position: absolute;
-  top: 13px;
+  top: 12px;
   left: 17px;
   opacity: 0.3;
   fill: #ffffff;
@@ -119,12 +124,13 @@ img {
 
 .searchbar {
   display: flex;
+  flex-grow: 1;
   align-items: center;
   padding-left: 48px;
   padding-right: 15px;
   border: 0;
   background-color: #293449;
-  min-width: 267px;
+  min-width: 270px;
   line-height: 40px;
   color: #ffffff;
 }
@@ -148,12 +154,15 @@ input.searchbar:focus ~ .searchbar-label {
 .top-btn {
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  min-width: 110px;
-  height: 42px;
-  line-height: 42px;
+  padding: 9px 17px 11px 17px;
+  width: 150px;
+  min-height: 42px;
+  box-sizing: border-box;
   color: white;
   background-color: #293449;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  white-space: pre-line;
 }
 
 
@@ -194,9 +203,11 @@ input.searchbar:focus ~ .searchbar-label {
 
 .order {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #63a63e;
-  margin-left: 3px;
+  width: 150px;
+
 }
 
 .order:hover {background-color: #5fbb2d;}
@@ -213,7 +224,7 @@ input.searchbar:focus ~ .searchbar-label {
   align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 41px;
+  margin-bottom: 41px;
 }
 
 .main-title {
@@ -317,26 +328,26 @@ input.searchbar:focus ~ .searchbar-label {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
+  margin-bottom: 60px;
   list-style: none;
-  height: 60px;
-  padding-left: 22px;
-  padding-right: 22px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .main-nav-item {
-  flex-grow: 1;
   text-align: center;
+
 }
 
 .main-nav-item a {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  padding: 19px 30px 21px 30px ;
   color: #ffffff;
-  line-height: 60px;
 }
 
 .main-nav-item a:hover,
@@ -355,35 +366,49 @@ input.searchbar:focus ~ .searchbar-label {
 
 .btn-user {
   display: flex;
-  justify-content: space-around;  
   text-decoration: none;
   font-size: 21px;
   color: black;
-  line-height: 45px;
+  align-items: center;
+  min-height: 45px;
   background-color: white;
+  position: relative;
+  padding: 8px 47px 10px 47px;
+  box-sizing: border-box;
 }
 
 .btn-user:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.btn-user:hover::before, .btn-user:hover::after {opacity: 1;}
-.btn-user:active::before, .btn-user:active::after {opacity: 0.3;}
+.btn-user:hover::before, .btn-user:hover::after {opacity: 1}
+.btn-user:active::before, .btn-user:active::after {opacity: 0.3}
 .btn-user:before {
   content: url(../img/icon-user.svg);
   opacity: 0.3;
-  margin-left: 12px;
+  position: absolute;
+  top: 11px;
+  left: 12px;
 }
 
 .btn-user:after {
-  content:url(../img/icon-login.svg);
+  content:url(../img/icon-logout.svg);
   opacity: 0.3;
-  margin-right: 12px;
+  top: 11px;
+  right: 11px;
+  position: absolute;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  width: 299px;
 }
 
 .profile-link {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 19px;
   align-items: center;
   margin-top: 6px;
 }
@@ -400,7 +425,7 @@ input.searchbar:focus ~ .searchbar-label {
 .profile-link a:active {color: rgba(50, 66, 92, 0.3);}
 
 .profile-link a:first-child {
-  margin-right: 15px;
+  margin-right: 13px;
 }
 
 .profile-link a:first-child::after {
@@ -421,7 +446,7 @@ input.searchbar:focus ~ .searchbar-label {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-end;
-  margin-top: 60px;
+  margin-top: 61px;
   margin-bottom: 53px;
 }
 
@@ -1393,45 +1418,57 @@ h2 + .btn-body {
 /* Хлебные крошки */
 .breadcrumb {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+
   list-style: none;
-  align-self: stretch;
-  margin-bottom: 25px;
   padding: 0;
+  margin-bottom: 25px;
+  box-sizing: border-box;
 }
 
 .breadcrumb-item {
   display: flex;
-  align-items: center;
-  margin-right: 16px;
+  margin: 0;
+  margin-right: 18px;
+  padding: 0;
   font-size: 13px;
+  line-height: 13px;
   font-family: ptsans, Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .breadcrumb-home {
-  font-size: 0px;
+  display: flex;
+  font-size: 0;
+  line-height: 13px;
+  margin: 0;
+
+  margin-right: 14px;
+  padding: 0;
   width: 14px;
-  height: 13px;
+  height: 12px;
   background: url(../img/icon-home.svg) no-repeat;
-  padding-left: 18px;
-  padding-right: 10px;
 }
 
-.breadcrumb-item:after {
-  content: url(../img/icon-right-small.svg);
+.breadcrumb-item:first-child::before {
+  display: none;
+}
+
+.breadcrumb-item:before {
+  content: "";
+  display: flex;
+  margin-top: -1px;
+  padding-right: 18px;
   width: 8px;
   height: 12px;
-  margin-left: 16px;
+  background: url(../img/icon-right-small.svg) no-repeat;
 }
 
 .breadcrumb-item:last-child {
   cursor: default;
 }
 
-.breadcrumb-item:last-child::after {
-  display: none;
-}
 
 .breadcrumb-item a {
   color: #000000; 
