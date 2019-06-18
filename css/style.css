@@ -393,6 +393,7 @@ input.searchbar:focus ~ .searchbar-label {
   align-items: center;
   font-size: 16px;
   color: #32425c; 
+  text-decoration: underline;
 }
 
 .profile-link a:hover {color: #ee3643;}
@@ -1772,6 +1773,7 @@ li:nth-child(3) .social-btn {
   width: 460px;
   min-height: 114px;
   resize: none;
+  overflow: auto;
 }
 
 .modal-action {
