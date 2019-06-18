@@ -1562,7 +1562,6 @@ h2 + .btn-body {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -1648,8 +1647,8 @@ li:nth-child(3) .social-btn {
 .modal {
   position: fixed;
   background-color: white;
-  top: 40%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
   z-index: 20;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
@@ -1676,9 +1675,19 @@ li:nth-child(3) .social-btn {
   background-color: #FF5156;
 }
 
+.modal-map {
+  margin-top: -223px;
+  margin-left: -470px;
+
+}
+
+.modal-map:after {
+  display: none;
+}
 
 .letter-btn {
   border: 0;
+  width: 100%;
 }
 
 
@@ -1692,22 +1701,82 @@ li:nth-child(3) .social-btn {
   position: absolute;
   top: 9px;
   right: 9px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.8);
   background-image: url(../img/form-close.svg);
+  box-shadow: 0 0 5px 7px rgba(255, 255, 255, 0.8);
 }
 
 .btn-close:hover {opacity: 0.8;}
 
 .modal-letter {
   width: 620px;
-  display: flex;
+  margin-top: -215px;
+  margin-left: -310px;
+
+  padding-top: 46px;
+  box-sizing: border-box;
 }
 
 .modal-letter fieldset {
-  margin: 0 80px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+ 
   display: flex;
   flex-direction: column;
 }
 
+.modal-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 80px;
+  
+}
 
+.modal-contact label{
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.filter-input-text {
+  font-family: ptsans, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  width: 220px;
+  height: 38px;
+  padding: 0;
+  padding: 12px 13px;
+  margin-top: 8px;
+  border: solid 2px #dee3e4;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.filter-input-text:hover {border-color: #b5b5b5;}
+.filter-input-text:focus {
+  border-color: #ee3643;
+  outline: none;
+  box-shadow: none;
+}
+
+.modal-textarea {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 38px; 
+}
+
+.modal-textarea textarea {
+  width: 460px;
+  min-height: 114px;
+  resize: none;
+}
+
+.modal-action {
+  background-color: #f1f1f1;
+  padding: 37px 80px;
+  display: flex;
+}
 
