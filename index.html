@@ -322,24 +322,24 @@
       </div>
     </footer>
 
-    <section class="modal modal-letter hide">
+    <section class="modal modal-letter">
       <h2 class="visually-hidden">Напишите нам!</h2>
       <form class="modal-letter-form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset>
           <div class="modal-contact">
             <label for = "input-name">
               Ваше имя:
-              <input class="filter-input-text" id="input-name"  type="text" placeholder="Имя Фамилия" required>
+              <input class="filter-input-text" name="name" id="input-name"  type="text" placeholder="Имя Фамилия" required>
             </label>    
             
             <label for = "input-email">
               Ваш e-mail:
-              <input class="filter-input-text" id="input-email"  type="email" placeholder="email@example.com" required>
+              <input class="filter-input-text" name="email" id="input-email"  type="email" placeholder="email@example.com" required>
             </label>    
           </div>
           <label class = "modal-textarea" for="textarea-letter">
             Текст письма:
-            <textarea class="filter-input-text" id="textarea-letter" placeholder="В свободной форме" required></textarea>
+            <textarea class="filter-input-text" name="message" id="textarea-letter" placeholder="В свободной форме" required></textarea>
           </label> 
           <div class="modal-action">
             <button type="submit" class="btn btn-body letter-btn">Отправить</button>

@@ -59,7 +59,6 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
 } 
 
 .hide {
@@ -766,6 +765,7 @@ h2 + .btn-body {
   font-size: 18px;
   color: black;
   margin: 8px 0 13px;
+  width: 220px;
 }
 
 .old-price{
@@ -1031,7 +1031,7 @@ h2 + .btn-body {
 }
 
 .filter-panel {
-  width: 220px;
+  min-width: 220px;
 }
 
 .filter-title,
@@ -1052,19 +1052,12 @@ h2 + .btn-body {
 }
 
 .filter fieldset {
-  display: flex;
   border: 0;
   padding: 0;
-  margin: 0;
+  margin: 25px 0 36px;
+  border-bottom: 1px solid #E6E6E6;
 }
 
-.filter fieldset:after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #E6E6E6;
-  margin: 25px 0 25px;
-}
 
 .filter .filter-list-power {
   margin-bottom: 55px;
@@ -1177,6 +1170,10 @@ h2 + .btn-body {
   height: 25px;
   margin-right: 10px;
 }
+.filter-input-checkbox:focus + .filter-label-checkbox::before,
+.filter-input-radio:focus + .filter-label-radio::before {
+  outline: 2px solid #A6C7FF;
+}
 
 .line-btn {
   display: flex;
@@ -1192,6 +1189,7 @@ h2 + .btn-body {
   justify-content: center;
   text-align: center;
   border-radius: 3px;  
+  line-height: 38px;
 }
 
 .line-btn:hover {
@@ -1199,9 +1197,11 @@ h2 + .btn-body {
   border-color: #bdc6ca;
 }
 
-.line-btn:active {
+.line-btn:active,
+.line-btn:focus {
   color: black;
   border-color: #ee3643;
+  outline: none;
 }
 
 /* Каталог */
@@ -1209,6 +1209,7 @@ h2 + .btn-body {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  min-width: 700px;
 }
 
 .sort {
@@ -1511,8 +1512,9 @@ h2 + .btn-body {
 
 .main-footer-top .tehnomart-logo {
   display: flex;
-  height: 68px;
+  height: 63px;
   justify-content: center;
+  align-items: center;
 }
 
 .main-footer-top .tehnomart-logo img {
