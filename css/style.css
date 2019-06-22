@@ -274,6 +274,7 @@ input.searchbar:focus ~ .searchbar-label {
   align-items: center;
   padding: 0 25px;
   border: 0;
+  cursor: pointer;
   
 }
 
@@ -543,24 +544,37 @@ input.searchbar:focus ~ .searchbar-label {
 
 
 .vista-slider {
-  display: flex;
-  flex-direction: column;
-  position: relative;
   width: 620px;
   height: 266px;
   margin-right: 20px;
-  padding-left: 25px;;
   background-color: #2D1B19;
-  background-size: cover;
-  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  overflow: hidden;
 }
 
 .vista-slider-1 {
-  background-image: url(../img/slide-image-1.jpg)
+  position: absolute;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  padding-left: 25px;
+  background-size: cover;
+  box-sizing: border-box;
+  background-image: url(../img/slide-image-1.jpg);
 }
 
 .vista-slider-2 {
-  background-image: url(../img/slide-image-2.jpg)
+  z-index: -1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  padding-left: 25px;
+  background-size: cover;
+  box-sizing: border-box;
+  background-image: url(../img/slide-image-2.jpg);
 }
 
 .vista-slider .vista-slider-title {
@@ -596,9 +610,20 @@ input.searchbar:focus ~ .searchbar-label {
 .promo-slider-nav {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 116px;
+  left: 24px;
+  top: 114px;
+  left: 25px;
+  width: 575px;
+  z-index: 1;
+}
 
-  margin-right: 20px;
-  margin-bottom: 53px;
+.vista-slider .btn-body {
+  position: absolute;
+  z-index: 1;
+  top: 206px;
+  left: 25px;
 }
 
 .promo-slider-nav button {
@@ -674,9 +699,7 @@ input.searchbar:focus ~ .searchbar-label {
   z-index: 1;
 } 
 
-.vista-slider .btn-body {
-  align-self: baseline;
-}
+
 
 .btn-body {
   height: 38px;
@@ -902,7 +925,7 @@ section.brands {
   display: flex;
 }
 
-.service-item.service-item__current a {
+.service-item.service-item__current {
   background-color: white;
   color:#32425c;
   box-shadow: none;
@@ -910,7 +933,7 @@ section.brands {
   line-height: 64px;
 }
 
-.service-item a {
+.service-item {
   width: 240px;
   min-height: 62px;
   box-sizing: border-box;
@@ -925,11 +948,18 @@ section.brands {
   background-color: #32425c;
   box-shadow: inset 0 1px 0 0 #293449, 
               inset 0 2px 0 0 #405069;
+  cursor: pointer;
 }
 
-.service-item a:hover {
+.service-item:hover {
   color: white;
   background-color: #293449;
+}
+
+.service-item__current:hover {
+  color:#32425c;
+  background-color: white;
+  cursor: default;
 }
 
 .service-description {
