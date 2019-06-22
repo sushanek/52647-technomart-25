@@ -1851,7 +1851,7 @@ li:nth-child(3) .social-btn {
 }
 
 .modal-map {
-  margin-top: -223px;
+  top:  240px;
   margin-left: -470px;
 
 }
@@ -1886,7 +1886,7 @@ li:nth-child(3) .social-btn {
 
 .modal-letter {
   width: 620px;
-  bottom: 201px;
+  top:  223px;
   margin-left: -310px;
 
   padding-top: 46px;
@@ -1958,13 +1958,13 @@ li:nth-child(3) .social-btn {
 
 
 
-.modal-tocart {
+.modal-basket {
   width: 620px;
   top: 411px;
   margin-left: -310px;
 }
 
-.modal-tocart span {
+.modal-basket span {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -1980,7 +1980,7 @@ li:nth-child(3) .social-btn {
   box-sizing: border-box;
 }
 
-.modal-tocart span:before {
+.modal-basket span:before {
   content: url(../img/modal-check.svg);
   display: block;
   width: 66px;
@@ -1988,7 +1988,7 @@ li:nth-child(3) .social-btn {
   margin-right: 30px;
 }
 
-.modal-tocart span:after {
+.modal-basket span:after {
   content: "";
   display: inline-block;
   min-height: 120px;
