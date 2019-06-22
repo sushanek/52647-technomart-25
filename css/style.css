@@ -640,8 +640,6 @@ input.searchbar:focus ~ .searchbar-label {
   left: 315px;
 }
 
-
-
 .vista-slider-title:before {
   content: ""; 
   position: absolute;
@@ -678,8 +676,7 @@ input.searchbar:focus ~ .searchbar-label {
   bottom: 38px;
   left: 297px;
   z-index: 1;
-} */
-
+} 
 
 .vista-slider .btn-body {
   align-self: baseline;
@@ -824,6 +821,8 @@ section.brands {
   padding: 9px 5px;
   box-sizing: border-box;
   margin-bottom: 21px;
+  margin-left: 10px;
+  margin-top: -2px;
 }
 
 .brands-item {
@@ -1824,7 +1823,6 @@ li:nth-child(3) .social-btn {
 .modal {
   position: fixed;
   background-color: white;
-  top: 50%;
   left: 50%;
   z-index: 20;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
@@ -1865,6 +1863,7 @@ li:nth-child(3) .social-btn {
 .letter-btn {
   border: 0;
   width: 100%;
+  background-color: #FF5156;
 }
 
 
@@ -1887,7 +1886,7 @@ li:nth-child(3) .social-btn {
 
 .modal-letter {
   width: 620px;
-  margin-top: -215px;
+  bottom: 201px;
   margin-left: -310px;
 
   padding-top: 46px;
@@ -1907,9 +1906,7 @@ li:nth-child(3) .social-btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 80px;
- 
-  
+  padding: 0 80px; 
 }
 
 .modal-contact label{
@@ -1959,9 +1956,11 @@ li:nth-child(3) .social-btn {
   display: flex;
 }
 
+
+
 .modal-tocart {
   width: 620px;
-  margin-top: -210px;
+  top: 411px;
   margin-left: -310px;
 }
 
@@ -1996,21 +1995,22 @@ li:nth-child(3) .social-btn {
   visibility: hidden;
 }
 
-.modal-action button {
+.modal-action .btn-modal {
   background-color: white;
   color: black;
   width: 250px;
   padding-left: 10px;
   padding-right: 10px;
   margin-left: 20px;
+  border: 0;
 }
 
-.modal-action button:hover {
+.modal-action .btn-modal:hover {
   color: #ee3643;
   background-color: white;
 }
 
-.modal-action button:active {
+.modal-action .btn-modal:active {
   color: rgba(0, 0, 0, 0.3);
   background-color: white;
 }
