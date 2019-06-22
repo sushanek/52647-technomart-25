@@ -61,10 +61,6 @@ img {
   max-width: 100%;
 } 
 
-.hide {
-  display: none;
-}
-
 .center-wrapper {
   width: 940px;
   margin: 0 auto;
@@ -1143,6 +1139,7 @@ section.brands {
 
 .left-drag,
 .right-drag {
+  top: 29px;
   display: block;
   background-color: #ACADAD;
   width: 20px;
@@ -1821,11 +1818,13 @@ li:nth-child(3) .social-btn {
 }
 
 .modal {
+  display: none; 
   position: fixed;
   background-color: white;
   left: 50%;
   z-index: 20;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  opacity: 0;
 }
 
 .modal::before {
@@ -1853,7 +1852,6 @@ li:nth-child(3) .social-btn {
 .modal-map {
   top:  240px;
   margin-left: -470px;
-
 }
 
 .modal-map:after {
@@ -1888,7 +1886,7 @@ li:nth-child(3) .social-btn {
   width: 620px;
   top:  223px;
   margin-left: -310px;
-
+  background-color: white;
   padding-top: 46px;
   box-sizing: border-box;
 }
@@ -2019,4 +2017,12 @@ li:nth-child(3) .social-btn {
   width: 250px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.modal-show {
+  transition: all 15s ease-out;
+  display: block;
+  background-color: white;
+  opacity: 1;
+  
 }
