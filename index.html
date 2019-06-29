@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Техномарт: Интернет-магазин</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -24,8 +24,8 @@
             </svg>
           </label>
         </form>
-        <a class="top-btn favorites" href="#">Закладки:&#8194<span class="favorites-count">0</span></a>
-        <a class="top-btn basket" href="#">Корзина:&#8194<span class="basket-count">0</span></a>
+        <a class="top-btn favorites" href="#">Закладки:<span class="favorites-count">0</span></a>
+        <a class="top-btn basket" href="#">Корзина:<span class="basket-count">0</span></a>
         <a class="top-btn order" href="#">Оформить заказ</a>
       </div>
     </section>
@@ -78,6 +78,7 @@
   <main class="container">
     <section class="vista">
       <h2 class="visually-hidden">Промо-блоки:</h2>
+
       <div class="vista-list">
         <div class="vista-1 vista-item new-flag-item">
           <h3>Материалы</h3>
@@ -92,36 +93,42 @@
           <a href="#">Для стройки</a>
         </div>
 
-        <div class="vista-slider">
-          <nav class="promo-slider-nav">
-            <button class="slider-move slider-left" id="slider-left" type="button">Назад</button>
-            <button class="slider-move slider-right" id="slider-right" type="button">Вперед</button>
-          </nav>
-          <a class="btn btn-body" href="catalog.html">Открыть каталог</a>
-
-          <div class=" vista-slider-1">
-            <div class="vista-slider-title">
-              <h3>Дрели</h3>
-              <span>Соседям на радость!</span>
+        <div class="vista-reverse">
+          <div class="duble">
+            <div class="vista-4 vista-item">
+              <h3>Скидка 50%</h3>
+              <a href="#">На 350 товаров</a>
+            </div>
+            <div class="vista-5 vista-item">
+              <h3>Доставка</h3>
+              <a href="#">Бесплатно</a>
             </div>
           </div>
-          <div class=" vista-slider-2">
-            <div class="vista-slider-title">
-              <h3>Перфоратор</h3>
-              <span>Настоящие мужские игрушки</span>
+
+          <div class="vista-slider">
+            <nav class="promo-slider-nav">
+              <button class="slider-move slider-left" id="slider-left" type="button">Назад</button>
+              <button class="slider-move slider-right" id="slider-right" type="button">Вперед</button>
+            </nav>
+            <a class="btn btn-body" href="catalog.html">Открыть каталог</a>
+
+            <div class="round-button">
+              <button class="btn round1" aria-label="Слайдер 1">Переключение на слайдер 1</button>
+              <button class="btn round2" aria-label="Слайдер 2">Переключение на слайдер 2</button>
             </div>
-          </div>
-        </div>
 
-
-        <div class="duble">
-          <div class="vista-4 vista-item">
-            <h3>Скидка 50%</h3>
-            <a href="#">На 350 товаров</a>
-          </div>
-          <div class="vista-5 vista-item">
-            <h3>Доставка</h3>
-            <a href="#">Бесплатно</a>
+            <div class=" vista-slider-1">
+              <div class="vista-slider-title">
+                <h3>Дрели</h3>
+                <span>Соседям на радость!</span>
+              </div>
+            </div>
+            <div class=" vista-slider-2 hide">
+              <div class="vista-slider-title">
+                <h3>Перфоратор</h3>
+                <span>Настоящие мужские игрушки</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -239,9 +246,9 @@
         </p>
         <div class="service-slider">
           <ul class="service-list">
-            <li class="btn-delivery service-item service-item__current">Доставка</li>
-            <li class="btn-guarantee service-item">Гарантия</li>
-            <li class="btn-credit service-item">Кредит</li>
+            <li class="btn-delivery service-item service-item__current" tabindex="0">Доставка</li>
+            <li class="btn-guarantee service-item"  tabindex="0">Гарантия</li>
+            <li class="btn-credit service-item"  tabindex="0">Кредит</li>
           </ul>
 
           <div class="service-description service-delivery">
@@ -295,8 +302,8 @@
       <div class="company-contact">
         <h2>Контакты</h2>
         <p class="section-text list-text">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-        <a class="btn-modal-map" href="catalog.html"><img src="img/map.jpg" width="300" height="158"
-            alt="Как нас найти на карте." title="Как нас найти на карте."></a>
+        <a class="btn-modal-map" href="https://goo.gl/maps/oZEEjsWfnuZxf2BK6"><img src="img/map.jpg" width="300"
+            height="158" alt="Как нас найти на карте." title="Как нас найти на карте."></a>
         <a class="btn btn-body btn-modal-letter" href="#">Заблудились? Напишите нам!</a>
       </div>
     </section>
